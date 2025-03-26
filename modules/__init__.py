@@ -1,1 +1,1 @@
-import modules
+from .GUI import app
