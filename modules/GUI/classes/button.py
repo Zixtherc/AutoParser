@@ -12,9 +12,10 @@ class Button(ctk.CTkButton):
     '''
     ### Класс который позволит нам создавать `Button` используя `наследование` ###
     '''
-    def __init__(self, ch_master: object, icon_name: str,  text: str, ch_fg_color: str,
+    def __init__(self, ch_master: object,  text: str, ch_fg_color: str,
                 ch_hover_color: str = '#373535', size: float = 20,
                 ch_corner_radius: int = 10, ch_command : object = None,
+                icon_name: str = None,
                 **kwargs):
         '''
         #### Метод `конструктор` который принимает в себя параметры: ####
@@ -48,7 +49,7 @@ class Button(ctk.CTkButton):
             self,
             master = ch_master,
             # В параметр image передаём наш метод, он возвращает нужное нам разрешение
-            image = self.load_image(),
+            image = None,
             text = self.TEXT,
             width = int(size),
             height = int(size),

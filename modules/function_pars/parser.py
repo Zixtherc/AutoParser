@@ -29,4 +29,4 @@ async def auto_parser(url: str, parse_mode: str, target: str = None):
         print(f"Error occurred while fetching the URL: {error}")
         return str(error)
 
-asyncio.run(main = auto_parser(url = "https://my.testportal.gov.ua/cabinet/login", parse_mode = "all"))
+# asyncio.run(main = auto_parser(url = "https://my.testportal.gov.ua/cabinet/login", parse_mode = "all"))
