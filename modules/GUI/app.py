@@ -1,5 +1,9 @@
 import customtkinter as ctk
 
+from .classes.button import Button
+from .classes.entry import EntryText
+from .classes.frame import Frame
+
 class App(ctk.CTk):
     '''
     
@@ -23,5 +27,17 @@ class App(ctk.CTk):
         self.frames = {}
         self.entry = {}
         self.label = {}
+
+        self.header()
+
+    def header(self):
+
+        self.frames['HEADER'] = Frame(
+            ch_master = self,
+            ch_width = self.WIDTH,
+            ch_height = self.HEIGHT,
+            ch_fg_color = '#f2d5ff'
+        )
+        self.frames['HEADER'].place(x = 0, y = 0)
 app = App()
 app.mainloop()
