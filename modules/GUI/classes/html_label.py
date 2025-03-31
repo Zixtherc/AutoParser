@@ -1,4 +1,3 @@
-import customtkinter as ctk
 import tkhtmlview
 
 class HtmlLabel(tkhtmlview.HTMLLabel):

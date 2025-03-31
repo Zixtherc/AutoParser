@@ -5,6 +5,8 @@ import asyncio
 from .classes.button import Button
 from .classes.entry import EntryText
 from .classes.frame import Frame
+from .classes.label import Label
+from .classes.html_label import HtmlLabel
 
 from ..function_pars.parser import auto_parser
 
@@ -67,5 +69,16 @@ class App(ctk.CTk):
         )
         self.button['PARSE'].place(x=250, y=10)
 
+        self.label['HTML_TEXT'] = HtmlLabel(
+            ch_master = self.frames["HEADER"],
+            ch_html_text = 'Hello',
+            ch_width = 150,
+            ch_height = 150,
+            ch_fg_color = '#ffffff',
+            ch_text_color = '#000000',
+            ch_relief = 'groove',
+            ch_borderwidth = 3,
+        )
+        self.label['HTML_TEXT'].pack()
+        
 app = App()
-app.mainloop()

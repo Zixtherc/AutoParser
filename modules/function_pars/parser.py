@@ -19,10 +19,11 @@ async def auto_parser(url: str, parse_mode: str, target: str = None):
             soup = bs4.BeautifulSoup(response.text, 'html.parser')
             if parse_mode == 'all':
                 data_html = soup.get_text()
-                print(f'ЭТо то что мы спарсили: {data_html}')
+                # print(f'ЭТо то что мы спарсили: {data_html}')
 
             headers = soup.find_all(target)
-            print(f'Это хедеры{ headers}')
+            # print(f'Это хедеры{ headers}')
+            return headers
         else:
             print(f'Ошибка при парсинге данных, код ошибки: {response.status_code}')
     except Exception as error:
