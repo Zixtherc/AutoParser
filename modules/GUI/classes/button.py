@@ -1,12 +1,8 @@
 '''
     `Модуль`, который вмещает в себя класс `Button`
 '''
-# Необходимый модуль для работы с изображением
 # Необходимый модуль для работы GUI
 import customtkinter as ctk
-# Необходимый модуль для построение путей
-from os.path import join, abspath
-
 
 class Button(ctk.CTkButton):
     '''

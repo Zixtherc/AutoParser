@@ -8,6 +8,20 @@ class EntryText(ctk.CTkEntry):
     def __init__(self, ch_master: object, ch_width: int, ch_height: int, ch_fg_color: str,
                 ch_corner_radius: int, ch_border_width: int, ch_placeholder_text: str, 
                 font_size: int, font_name: str = "Arial", ch_placeholder_text_color : str = "#000000",ch_text_color : str = "#000000",**kwargs):
+        '''
+        #### Метод `конструктор`, который принимает в себя параметры: ####'
+        - `ch_master:` `Объект` главного окна;
+        - `ch_width:` Ширина `лейбла`;
+        - `ch_height:` Высота `лейбла`;
+        - `ch_fg_color:` Цвет фона `лейбла`;
+        - `ch_text:` Текст `лейбла`;
+        - `path_to_image:` Путь до изображения;
+        - `ch_placeholder_text:` Текст для подсказки;
+        - `font_size:` Размер шрифта;
+        - `font_name:` Название шрифта;
+        - `ch_placeholder_text_color:` Цвет текста подсказки;
+        - `ch_text_color:` Цвет текста;
+        '''
         ctk.CTkEntry.__init__(
             self,
             master = ch_master,
