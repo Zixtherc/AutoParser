@@ -65,20 +65,20 @@ class App(ctk.CTk):
             text = "Login",
             ch_fg_color = "#61004f",
             size = 35,
-            ch_command = lambda: asyncio.run(auto_parser(url = self.entry['URL'].get(), parse_mode = 'all'))
+            ch_command = lambda: asyncio.run(auto_parser(url = self.entry['URL'].get(), parse_mode = 'all', frame_dict = self.frames))
         )
         self.button['PARSE'].place(x=250, y=10)
 
-        self.label['HTML_TEXT'] = HtmlLabel(
-            ch_master = self.frames["HEADER"],
-            ch_html_text = 'Hello',
-            ch_width = 150,
-            ch_height = 150,
-            ch_fg_color = '#ffffff',
-            ch_text_color = '#000000',
-            ch_relief = 'groove',
-            ch_borderwidth = 3,
-        )
-        self.label['HTML_TEXT'].pack()
+        # self.label['HTML_TEXT'] = HtmlLabel(
+        #     ch_master = self.frames["HEADER"],
+        #     ch_html_text = 'Hello',
+        #     ch_width = 150,
+        #     ch_height = 150,
+        #     ch_fg_color = '#ffffff',
+        #     ch_text_color = '#000000',
+        #     ch_relief = 'groove',
+        #     ch_borderwidth = 3,
+        # )
+        # self.label['HTML_TEXT'].pack()
         
 app = App()
